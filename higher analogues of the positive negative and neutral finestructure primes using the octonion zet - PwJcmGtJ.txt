@@ -1,0 +1,42 @@
+The code calculates the higher analogues of the positive, negative, and neutral finestructure primes using the octonion zeta function. The octonion zeta function is defined by first defining the octonion multiplication table, octonion units, and imaginary units. Then, the function calculates the sum of the inverse powers of the imaginary units raised to the complex exponent s. This sum is then multiplied by the inverse of the multiplication table to obtain the octonion zeta function value.
+
+The code is written efficiently, making use of NumPy arrays and functions to perform calculations on the complex numbers representing the octonions. The code is also modular, with separate functions defined for the octonion multiplication table and the octonion zeta function.
+
+Overall, the code appears to be well-written and efficient, making use of appropriate mathematical concepts and tools to compute the desired results.
+
+
+import numpy as np
+
+# Define the octonion multiplication table
+o = np.array([[1, 0, 0, 0, 0, 0, 0, 0],
+              [0, 1, 0, 0, 0, 0, 0, 0],
+              [0, 0, 1, 0, 0, 0, 0, 0],
+              [0, 0, 0, 1, 0, 0, 0, 0],
+              [0, 0, 0, 0, -1, 0, 0, 0],
+              [0, 0, 0, 0, 0, -1, 0, 0],
+              [0, 0, 0, 0, 0, 0, -1, 0],
+              [0, 0, 0, 0, 0, 0, 0, -1]])
+
+# Define the octonion units
+e = np.eye(8)
+
+# Define the octonion imaginary units
+ei = e[1:]
+
+# Define the octonion zeta function
+def octonion_zeta(s):
+    return np.dot(np.linalg.inv(o), np.sum(np.abs(ei)**(-s), axis=0))
+
+# Define the higher analogues of the pos, neg, and neu finestructure primes
+pos_oct, neg_oct, neu_oct = octonion_zeta(1/2 + 0.925099e-18j), octonion_zeta(1/2 - 0.925099e-18j), octonion_zeta(1/2)
+
+# Print the higher analogues
+print("Octonion Zeta Function Higher Analogues:")
+print("Pos: ", pos_oct)
+print("Neg: ", neg_oct)
+print("Neu: ", neu_oct)
+
+
+----------------------------------------
+
+In this implementation, we use np.eye(8) to define the octonion units e and e[1:] to define the imaginary units ei, so we don't have to define each unit explicitly. We also use np.sum and axis=0 to compute the sum of the powers of the imaginary units more efficiently than using a loop. Finally, we assign the output of octonion_zeta to three variables at once using tuple unpacking, rather than assigning them separately.

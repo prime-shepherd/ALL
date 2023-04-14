@@ -1,0 +1,57 @@
+import numpy as np
+import pandas as pd
+import requests
+
+# Define function to retrieve atomic radii from the NIST database
+def get_atomic_radii(element):
+    url = f"https://physics.nist.gov/cgi-bin/ASD/asisget.pl?element={element}&format=csv"
+    r = requests.get(url)
+    data = r.content.decode('utf8')
+    atomic_radii = pd.read_csv(io.StringIO(data), skiprows=1, names=['state', 'uncertainty', 'atomic_radius'])
+    atomic_radii = atomic_radii[atomic_radii['state'] == 'ground state']
+    atomic_radii = atomic_radii['atomic_radius'].mean()
+    return atomic_radii
+
+# Define function to retrieve electronegativity values from the Pauling scale
+def get_electronegativity(element):
+    url = 'https://gist.githubusercontent.com/GoodmanSciences/c2dd862cd38f21b0ad36b8f96b4bf1ee/raw/b7f32102fa0fc77318e5f999c5f7282c1145c8d7/electronegativity_pauling.csv'
+    r = requests.get(url)
+    data = r.content.decode('utf8')
+    pauling_electronegativity = pd.read_csv(io.StringIO(data), index_col=0)
+    return pauling_electronegativity.loc[element, 'Electronegativity']
+
+# Define function to calculate the Shepard tone frequency components for an element
+def calculate_shepard_tone(element):
+    atomic_radii = get_atomic_radii(element)
+    pauling_electronegativity = get_electronegativity(element)
+    frequency_components = []
+    for i in range(1, 9):
+        frequency = atomic_radii / i ** 2 + pauling_electronegativity * i
+        frequency_components.append(frequency)
+    return frequency_components
+
+# Define function to calculate the prime zeta values for an element's Shepard tone frequency components
+def calculate_prime_zeta(element):
+    frequency_components = calculate_shepard_tone(element)
+    prime_zeta_values = []
+    for frequency in frequency_components:
+        prime_zeta = 0
+        for p in range(2, 2000000):
+            if is_prime(p):
+                prime_zeta += 1 / p ** frequency
+        prime_zeta_values.append(prime_zeta)
+    return prime_zeta_values
+
+# Define function to check if a number is prime
+def is_prime(n):
+    if n == 2 or n == 3:
+        return True
+    if n == 1 or n % 2 == 0:
+        return False
+    for i in range(3, int(n ** 0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+
+# Get list of elements
+elements = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As', 'Se', 'Br', 'Kr', 'Rb', 'Sr', 'Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru',
