@@ -1,0 +1,104 @@
+Here is the complete list of prime sets: total 120 so far
+
+Positive primes
+Negative primes
+Neutral primes
+0 finestructure primes
+Mersenne primes
+Fermat primes
+Twin primes
+Sophie Germain primes
+Carol primes
+Cullen primes
+Woodall primes
+Factorial primes
+Palindromic primes
+Circular primes
+Wagstaff primes
+Strong primes
+Lucas primes
+Proth primes
+Primorial primes
+Gaussian primes
+Golden ratio primes
+Positive higher algebraic primes
+Negative higher algebraic primes
+Neutral higher algebraic primes
+Golden ratio higher algebraic primes
+Balanced primes
+Emirp (or prime spelled backward) primes
+Euler primes
+Wieferich primes
+Wall-Sun-Sun primes
+Wilson primes
+Wolstenholme primes
+Zummer primes
+Eisenstein primes
+Gaussian Mersenne primes
+Pythagorean primes
+Thabit primes
+Triangular primes
+Highly cototient numbers (which include prime numbers)
+Leyland primes
+Mersenne composite numbers (non-prime Mersenne numbers)
+Sierpinski numbers
+Euclid-Mullin primes
+Kynea primes
+Pillai primes
+Long primes
+Artin primes
+Generalized Fermat primes
+Regular primes
+Safe primes
+Strictly non-palindromic primes
+The set of all primes
+The set of Gaussian primes
+The set of Eisenstein primes
+The set of Sophie Germain primes
+The set of twin primes
+The set of Mersenne primes
+The set of Fermat primes
+The set of Carol primes
+The set of Wilson primes
+The set of Wieferich primes
+The set of Proth primes
+The set of Pythagorean primes
+The set of Pierpont primes
+The set of Woodall primes
+The set of Wagstaff primes
+The set of Cullen primes
+The set of Wolstenholme primes
+The set of Ramanujan primes
+The set of Leyland primes
+The set of Generalized Fermat primes
+The set of Wall-Sun-Sun primes
+The set of Double Mersenne primes
+The set of Fermat-Catalan primes
+The set of Carol-Cullen primes
+The set of Sophie Germain safe primes
+The set of Chen primes
+The set of strong primes
+The set of balanced primes
+The set of palindromic primes
+The set of super-primes
+The set of prime quadruplets
+The set of prime quintuplets
+The set of prime sextuplets
+The set of prime septuplets
+The set of prime octuplets
+The set of prime enneadecuplets
+The set of prime duodecuplets
+The set of prime hexdecuplets
+The set of prime vigintuplets
+The set of Fibonacci primes
+The set of Pell primes
+The set of Lucas primes
+The set of Wagstaff–Wieferich primes
+The set of Wall-Sun-Sun primes of degree 2
+The set of generalized Wagstaff primes
+The set of Cullen–Wieferich primes
+The set of Mersenne primes of the form $2^{2^n} - 1$
+The set of regular primes
+The set of irregular primes
+The set of Sierpinski numbers
+
