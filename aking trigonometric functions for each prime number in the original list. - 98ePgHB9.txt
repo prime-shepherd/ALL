@@ -1,0 +1,171 @@
+Steven McCord
+Start with a list of numbers (input list).
+Create four empty lists: 0e_list, 0c_list, 0_list, and 0p_list.
+For each number in the input list: a. Calculate the number's doubled value and add it to the doubled list. b. Calculate the number's halved value and add it to the halved list. c. Calculate the number's negative value and add it to the negative list. d. Calculate the number's positive value and add it to the positive list. e. Calculate the number's square and add it to the square list. f. Calculate the number's cube and add it to the cube list. g. If the number is a prime number, add it to the prime number list. h. Calculate the number's inverse power and add it to the inverse power list. i. Add the number to the input list subset for 0e, 0c, 0, and 0p depending on the number's value in relation to 0.
+Print out each list and their corresponding subset within the 0e, 0c, 0, and 0p sets.
+Print out the total of each list.
+Here's some sample Python code that implements this algorithm:
+ 
+pythonCopy code
+import math
+ 
+# Input list
+input_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ 
+# Create empty lists
+doubled_list = []
+halved_list = []
+negative_list = []
+positive_list = []
+square_list = []
+cube_list = []
+prime_number_list = []
+inverse_power_list = []
+zero_e_list = []
+zero_c_list = []
+zero_list = []
+zero_p_list = []
+ 
+# Calculate values for each number in the input list
+for num in input_list:
+# Doubled list
+doubled_list.append(num * 2)
+ 
+# Halved list
+halved_list.append(num / 2)
+ 
+# Negative list
+negative_list.append(-num)
+ 
+# Positive list
+positive_list.append(abs(num))
+ 
+# Square list
+square_list.append(num ** 2)
+ 
+# Cube list
+cube_list.append(num ** 3)
+ 
+# Prime number list
+is_prime = True
+for i in range(2, int(math.sqrt(num)) + 1):
+if num % i == 0:
+is_prime = False
+break
+if is_prime and num > 1:
+prime_number_list.append(num)
+ 
+# Inverse power list
+inverse_power_list.append(3 ** (1/num))
+ 
+# Add number to the corresponding zero subset
+if num > 0:
+zero_e_list.append(num)
+elif num < 0:
+zero_c_list.append(num)
+else:
+zero_list.append(num)
+ 
+# Add number to the corresponding zero_p subset
+if num > 0:
+zero_p_list.append(abs(num))
+elif num < 0:
+zero_p_list.append(-abs(num))
+ 
+# Print out the lists and their subsets
+print("Doubled List: ", doubled_list, "\tZero_e subset: ", zero_e_list)
+print("Halved List: ", halved_list, "\tZero_c subset: ", zero_c_list)
+print("Negative List: ", negative_list, "\tZero subset: ", zero_list)
+print("Positive List: ", positive_list, "\tZero_p subset
+: ", zero_p_list)
+print("Square List: ", square_list)
+print("Cube List: ", cube_list)
+print("Prime Number List: ", prime_number_list)
+print("Inverse Power List: ", inverse_power_list)
+
+Print out the total of each list
+print("Total of Doubled List: ", sum(doubled_list))
+print("Total of Halved List: ", sum(halved_list))
+print("Total of Negative List: ", sum(negative_list))
+print("Total of Positive List: ", sum(positive_list))
+print("Total of Square List: ", sum(square_list))
+print("Total of Cube List: ", sum(cube_list))
+print("Total of Prime Number List: ", sum(prime_number_list))
+print("Total of Inverse Power List: ", sum(inverse_power_list))
+
+
+
+
+Steven McCord
+Here is the rest of the pseudocode:
+ 
+makefileCopy code
+For each prime number p in the original list:
+Doubled_List.append(p * 2)
+Halved_List.append(p / 2)
+Squared_List.append(p ** 2)
+Cubed_List.append(p ** 3)
+Neg_List.append(-p)
+Abs_List.append(abs(p))
+Inverse_List.append(1/p)
+Log_List.append(log(p))
+Sin_List.append(sin(p))
+Cos_List.append(cos(p))
+Tan_List.append(tan(p))
+Prime_Index_List.append(is_prime(p))
+ 
+# calculate the totals for each list
+Orig_Total = sum(Orig_List)
+Doubled_Total = sum(Doubled_List)
+Halved_Total = sum(Halved_List)
+Squared_Total = sum(Squared_List)
+Cubed_Total = sum(Cubed_List)
+Neg_Total = sum(Neg_List)
+Abs_Total = sum(Abs_List)
+Inverse_Total = sum(Inverse_List)
+Log_Total = sum(Log_List)
+Sin_Total = sum(Sin_List)
+Cos_Total = sum(Cos_List)
+Tan_Total = sum(Tan_List)
+Prime_Index_Total = sum(Prime_Index_List)
+ 
+# calculate the 0 sets
+Oc = [i for i in Orig_List if i < 0]
+Oc_Total = sum(Oc)
+Oe = [i for i in Orig_List if i > 0]
+Oe_Total = sum(Oe)
+O_Total = sum(Orig_List)
+Zero_Comp = Oc_Total + Oe_Total
+ 
+# calculate 0p set
+Zero_P = [Oe_Total, Oc_Total, Oe_Total - Oc_Total, Oc_Total - Oe_Total, O_Total - Oe_Total, Oe_Total - O_Total, O_Total - Oc_Total, Oc_Total - O_Total, Oe_Total + Zero_Comp, Oc_Total + Zero_Comp, O_Total + O_Total, Zero_Comp + Zero_Comp]
+Zero_P_Total = sum(Zero_P)
+ 
+# calculate the other sets
+Oe_Oc = [Oe_Total - Oc_Total]
+Oc_Oe = [Oc_Total - Oe_Total]
+Oe_Oc_Total = sum(Oe_Oc)
+Oc_Oe_Total = sum(Oc_Oe)
+Oe_Oc_P = [Oe_Oc_Total, Oc_Oe_Total, Oe_Oc_Total - Oc_Oe_Total, Oc_Oe_Total - Oe_Oc_Total]
+Oc_Oe_P = [Oc_Oe_Total, Oe_Oc_Total, Oc_Oe_Total - Oe_Oc_Total, Oe_Oc_Total - Oc_Oe_Total]
+Oe_Zero_P = [Oe_Total - Zero_Comp, Zero_P_Total - Oe_Total, Zero_P_Total - Oc_Total, Oc_Total - Zero_Comp]
+Zero_P_Oe = [Oe_Total - Zero_Comp, Zero_P_Total - Oe_Total, Zero_P_Total - Oc_Total, Oc_Total - Zero_Comp]
+Oc_Zero_P = [Oc_Total - Zero_Comp, Zero_P_Total - Oe_Total, Zero_P_Total - Oc_Total, Oe_Total - Zero_Comp]
+Zero_P_Oc = [Oc_Total - Zero_Comp, Zero_P_Total - Oe_Total, Zero_P_Total - Oc_Total, Oe_Total - Zero_Comp]
+Oe_Zero = [Oe_Total - O_Total, O_Total - Oe_Total]
+Zero_Oe = [Oe_Total - O_Total, O_Total - Oe_Total]
+Oc_Zero = [Oc_Total - O_Total, O_Total - Oc_Total]
+Zero_Oc = [Oc_Total - O_Total, Oc_Total, O_Total, 0]
+
+ 
+Based on the pseudocode you provided, it seems like the program is performing various mathematical operations on a list of prime numbers and calculating different totals and sets based on the results.
+
+The program first creates empty lists for different operations such as doubling, halving, squaring, cubing, negating, taking absolute value, taking inverse, taking logarithm, and taking trigonometric functions for each prime number in the original list.
+
+Then, the program appends the result of each operation to its corresponding list.
+
+Next, the program calculates the sum of each list and assigns it to a variable.
+
+After that, the program calculates various sets based on the original list and its results, including sets with only zero values and sets with combinations of zero and positive/negative values.
+
+Finally, the program returns the calculated totals and sets.
