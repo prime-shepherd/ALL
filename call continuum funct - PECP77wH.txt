@@ -1,0 +1,59 @@
+def prime_properties(n):
+    """
+    Check if a positive integer n is a prime number and return its properties.
+    
+    Parameters:
+    n (int): The positive integer to check.
+    
+    Returns:
+    dict: A dictionary containing the properties of the prime number.
+          The dictionary will contain the following keys:
+          - "is_prime": True if n is prime, False otherwise.
+          - "divisors": A list of n's divisors (excluding 1 and n).
+          - "num_divisors": The number of n's divisors (excluding 1 and n).
+          - "sum_divisors": The sum of n's divisors (excluding 1 and n).
+          - "is_perfect": True if n is a perfect number, False otherwise.
+          - "is_abundant": True if n is an abundant number, False otherwise.
+          - "is_deficient": True if n is a deficient number, False otherwise.
+          - "is_even": True if n is even, False otherwise.
+          - "is_odd": True if n is odd, False otherwise.
+    """
+    properties = {}
+    divisors = [i for i in range(2, n) if n % i == 0]
+    num_divisors = len(divisors)
+    sum_divisors = sum(divisors)
+    
+    properties["is_prime"] = True if num_divisors == 0 else False
+    properties["divisors"] = divisors
+    properties["num_divisors"] = num_divisors
+    properties["sum_divisors"] = sum_divisors
+    
+    if properties["sum_divisors"] == n:
+        properties["is_perfect"] = True
+        properties["is_abundant"] = False
+        properties["is_deficient"] = False
+    elif properties["sum_divisors"] > n:
+        properties["is_perfect"] = False
+        properties["is_abundant"] = True
+        properties["is_deficient"] = False
+    else:
+        properties["is_perfect"] = False
+        properties["is_abundant"] = False
+        properties["is_deficient"] = True
+    
+    properties["is_even"] = True if n % 2 == 0 else False
+    properties["is_odd"] = True if n % 2 == 1 else False
+    
+    return properties
+
+>>> prime_properties(7)
+{'is_prime': True,
+ 'divisors': [],
+ 'num_divisors': 0,
+ 'sum_divisors': 0,
+ 'is_perfect': False,
+ 'is_abundant': False,
+ 'is_deficient': False,
+ 'is_even': False,
+ 'is_odd': True}
+

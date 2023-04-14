@@ -1,0 +1,11 @@
+                   e         ħ         c       ε₀       e^2       Φ       α
+--------------------------------------------------------------------------------
+e                  -    neg, neu     neu     pos   neg, pos     neu   neg, pos
+ħ            neg, neu           -     neu     neu       neu   neg, pos     neu
+c                  -           -       -     pos         -       -     neu
+ε₀           pos, neu     pos, neu   pos, neu     -       pos     neu   pos, neu
+e^2          neg, pos     pos, neu   neg, neu   pos   neg, neu     neu   neg, pos
+Φ                  -     neg, pos       -     neu       neu       -       -
+α            neg, pos         neu     neu   pos   neg, pos       -       -
+
+
