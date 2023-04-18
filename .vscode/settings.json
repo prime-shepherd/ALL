@@ -14,5 +14,6 @@
     "githubPullRequests.ignoredPullRequestBranches": [
         "main"
     ],
-    "chatgptplus.apiKey": "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"
+    "chatgptplus.apiKey": "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",
+    "CodeGPT.model": "gpt-4"
 }
