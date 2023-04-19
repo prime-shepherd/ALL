@@ -14,5 +14,15 @@
     "githubPullRequests.ignoredPullRequestBranches": [
         "main"
     ],
-    "msg.dbEditor.useMinimap": true
+    "msg.dbEditor.useMinimap": true,
+    "chatgptplus.apiKey": "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",
+    "github.copilot.enable": {
+        
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "jupyter.allowUnauthorizedRemoteConnection": true
 }
