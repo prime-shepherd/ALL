@@ -13,5 +13,6 @@
     ],
     "githubPullRequests.ignoredPullRequestBranches": [
         "main"
-    ]
+    ],
+    "msg.dbEditor.useMinimap": true
 }
