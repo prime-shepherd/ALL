@@ -4,11 +4,43 @@
     "colId": "history",
     "containerId": "",
     "name": "https://all-zeta.vercel.app/?fbclid=IwAR3ZcOxrnIA96qSSygPJybOnll1O7Agxkmx6fhoCg08FbAZD5_Kg6QROhiE",
+    "url": "https://all-zeta.vercel.app",
+    "method": "OPTIONS",
+    "sortNum": 0,
+    "created": "2023-04-18T16:56:37.727Z",
+    "modified": "2023-04-18T22:52:00.581Z",
+    "headers": [
+      {
+        "name": "Accept",
+        "value": "*/*",
+        "isDisabled": true
+      },
+      {
+        "name": "User-Agent",
+        "value": "Thunder Client (https://www.thunderclient.com)",
+        "isDisabled": true
+      }
+    ],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "_id": "2cc37235-c300-4d15-81db-a1aa56733310",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://all-zeta.vercel.app/?fbclid=IwAR3ZcOxrnIA96qSSygPJybOnll1O7Agxkmx6fhoCg08FbAZD5_Kg6QROhiE",
     "url": "https://all-zeta.vercel.app/?fbclid=IwAR3ZcOxrnIA96qSSygPJybOnll1O7Agxkmx6fhoCg08FbAZD5_Kg6QROhiE",
     "method": "GET",
     "sortNum": 0,
-    "created": "2023-04-18T16:56:37.727Z",
-    "modified": "2023-04-18T21:14:30.499Z",
+    "created": "2023-04-18T22:53:44.795Z",
+    "modified": "2023-04-18T22:53:44.795Z",
     "headers": [],
     "params": [
       {
@@ -17,25 +49,6 @@
         "isPath": false
       }
     ],
-    "tests": [
-      {
-        "type": "Content-Type",
-        "custom": "",
-        "action": "isjson",
-        "value": ""
-      },
-      {
-        "type": "set-env-var",
-        "custom": "json.",
-        "action": "count",
-        "value": ""
-      },
-      {
-        "type": "res-code",
-        "custom": "",
-        "action": "equal",
-        "value": ""
-      }
-    ]
+    "tests": []
   }
 ]
