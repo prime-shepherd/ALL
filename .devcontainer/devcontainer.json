@@ -501,7 +501,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"HaselerDev.aiquickfix"
+				"HaselerDev.aiquickfix",
+				"satiromarra.vscode-php-test-explorer-docker"
 			]
 		}
 	}
