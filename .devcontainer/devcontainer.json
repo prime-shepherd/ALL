@@ -502,7 +502,8 @@
 		"vscode": {
 			"extensions": [
 				"HaselerDev.aiquickfix",
-				"satiromarra.vscode-php-test-explorer-docker"
+				"satiromarra.vscode-php-test-explorer-docker",
+				"Oracle.mysql-shell-for-vs-code"
 			]
 		}
 	}
