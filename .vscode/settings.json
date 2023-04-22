@@ -14,6 +14,20 @@
     "githubPullRequests.ignoredPullRequestBranches": [
         "main"
     ],
+codespace-prime-shepherd-automatic-memory-xjv9rg74rq7h9xxw
+    "msg.dbEditor.useMinimap": true,
+    "chatgptplus.apiKey": "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",
+    "github.copilot.enable": {
+        
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "jupyter.allowUnauthorizedRemoteConnection": true
+
     "chatgptplus.apiKey": "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",
     "CodeGPT.model": "gpt-4"
+main
 }
