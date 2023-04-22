@@ -526,6 +526,17 @@ codespace-prime-shepherd-automatic-memory-xjv9rg74rq7h9xxw
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
+WorkingMainBranch
+},
+"customizations": {
+	"vscode": {
+		"extensions": [
+			"ms-edgedevtools.vscode-edge-devtools"
+		]
+	}
+}
+
   }
+main
 main
 }
